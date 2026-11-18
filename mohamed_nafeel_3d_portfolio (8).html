@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Nafeel | 3D Portfolio</title>
+<style>
+:root{--navy:#101d35;--blue:#2563eb;--ice:#eaf1fb;--slate:#64748b;--white:#fff;--line:#dbe4f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:#17243b;background:linear-gradient(135deg,#f5f8fd,#e8eef7);overflow-x:hidden}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:#101d35ee;backdrop-filter:blur(12px);color:white}
+.logo{font-weight:800;letter-spacing:1px}.logo span{color:#77a9ff}nav a{color:#dce8fb;text-decoration:none;margin-left:24px;font-size:14px}nav a:hover{color:#8db7ff}
+.hero{min-height:88vh;padding:80px 8%;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px;background:radial-gradient(circle at 80% 35%,#c9d9f2 0,transparent 32%)}
+.eyebrow{color:var(--blue);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.04;margin:16px 0;color:var(--navy)}.hero h1 span{color:var(--blue)}.hero p{font-size:18px;line-height:1.7;color:#5b6b83;max-width:570px}
+.btn{display:inline-block;margin:14px 12px 0 0;padding:13px 22px;border-radius:12px;text-decoration:none;font-weight:700;background:var(--blue);color:white;box-shadow:0 9px 20px #2563eb45;transition:.25s}.btn:hover{transform:translateY(-4px)}.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line);box-shadow:0 8px 18px #1b315015}
+.scene{height:370px;display:grid;place-items:center;perspective:1000px}.cube{width:230px;height:230px;position:relative;transform-style:preserve-3d;transform:rotateX(-24deg) rotateY(35deg);animation:float 5s ease-in-out infinite}.face{position:absolute;width:230px;height:230px;border:1px solid #ffffff88;background:linear-gradient(145deg,#4c83e8dd,#14294ddd);box-shadow:inset 0 0 35px #ffffff24,0 15px 40px #14294d30;display:grid;place-items:center;color:white;font-size:30px;font-weight:800;letter-spacing:3px}.front{transform:translateZ(115px)}.back{transform:rotateY(180deg) translateZ(115px)}.right{transform:rotateY(90deg) translateZ(115px)}.left{transform:rotateY(-90deg) translateZ(115px)}.top{transform:rotateX(90deg) translateZ(115px)}.bottom{transform:rotateX(-90deg) translateZ(115px)}
+@keyframes float{0%,100%{transform:translateY(0) rotateX(-24deg) rotateY(35deg)}50%{transform:translateY(-18px) rotateX(-18deg) rotateY(55deg)}}
+section{padding:76px 8%}.section-title{text-align:center;margin-bottom:38px}.section-title small{color:var(--blue);font-weight:800;letter-spacing:2px}.section-title h2{font-size:34px;color:var(--navy);margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:#ffffffc9;border:1px solid white;border-radius:20px;padding:25px;box-shadow:12px 12px 28px #1b315015,-8px -8px 25px #fff;transform:perspective(800px) rotateX(0);transition:.25s}.card:hover{transform:perspective(800px) rotateX(4deg) translateY(-7px);box-shadow:0 20px 35px #1b315025}.card .icon{font-size:28px}.card h3{color:var(--navy);margin:12px 0 8px}.card p{color:var(--slate);line-height:1.6;margin:0}
+.about{background:var(--navy);color:white}.about .section-title h2{color:white}.about .section-title small{color:#8db7ff}.about p{max-width:850px;margin:auto;text-align:center;line-height:1.9;color:#c8d5e9;font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.chip{background:#eaf1fb;color:#23436f;padding:11px 17px;border-radius:30px;font-weight:700;border:1px solid #d5e2f5}
+.contact{text-align:center}.contact p{color:var(--slate)}footer{text-align:center;padding:24px;background:var(--navy);color:#c8d5e9;font-size:13px}
+@media(max-width:760px){nav{padding:16px 5%}nav a{margin-left:10px;font-size:12px}.hero{grid-template-columns:1fr;padding:65px 7%;text-align:center}.hero p{margin:0 auto}.scene{height:290px}.cube,.face{width:170px;height:170px}.front{transform:translateZ(85px)}.back{transform:rotateY(180deg) translateZ(85px)}.right{transform:rotateY(90deg) translateZ(85px)}.left{transform:rotateY(-90deg) translateZ(85px)}.top{transform:rotateX(90deg) translateZ(85px)}.bottom{transform:rotateX(-90deg) translateZ(85px)}section{padding:60px 7%}}
+</style>
+</head>
+<body>
+<nav><div class="logo">MN<span>.</span></div><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#details">Details</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<div><div class="eyebrow">Welcome to my portfolio</div><h1>Mohamed <span>Nafeel</span></h1><p>Creative, curious and motivated. I enjoy planning, designing and solving problems while continuously learning new things.</p><a class="btn" href="#contact">Get in touch</a><a class="btn secondary" href="#about">Explore portfolio</a></div>
+<div class="scene" aria-label="Animated 3D portfolio cube"><div class="cube"><div class="face front">MN</div><div class="face back">CREATE</div><div class="face right">DESIGN</div><div class="face left">LEARN</div><div class="face top">IDEAS</div><div class="face bottom">BUILD</div></div></div>
+</header>
+<section id="about" class="about"><div class="section-title"><small>WHO I AM</small><h2>About Me</h2></div><p>I am Mohamed Nafeel, an enthusiastic individual with an interest in creative work, planning and project management. I value problem-solving, time management and learning through new experiences.</p></section>
+<section id="skills"><div class="section-title"><small>WHAT I DO WELL</small><h2>My Skills</h2></div><div class="grid">
+<div class="card"><div class="icon">🗂️</div><h3>Planning</h3><p>Organising tasks and setting clear goals.</p></div>
+<div class="card"><div class="icon">🎨</div><h3>Designing</h3><p>Developing creative ideas and visual concepts.</p></div>
+<div class="card"><div class="icon">🧩</div><h3>Problem Solving</h3><p>Thinking through challenges and finding solutions.</p></div>
+<div class="card"><div class="icon">⏱️</div><h3>Time Management</h3><p>Prioritising work and meeting deadlines.</p></div>
+<div class="card"><div class="icon">📌</div><h3>Project Management</h3><p>Coordinating tasks and tracking progress.</p></div>
+</div></section>
+<section id="details"><div class="section-title"><small>MORE ABOUT ME</small><h2>Personal Details</h2></div><div class="grid">
+<div class="card"><h3>Personal Information</h3><p><b>Date of Birth:</b> 13 October 2003<br><b>Marital Status:</b> Single<br><b>Nationality:</b> Indian<br><b>Gender:</b> Male</p></div>
+<div class="card"><h3>Languages</h3><p>Tamil<br>English<br>Malayalam</p></div>
+<div class="card"><h3>Interests</h3><p>Planting & gardening<br>Reading novels<br>Cooking<br>Playing games<br>Singing</p></div>
+</div></section>
+<section class="about"><div class="section-title"><small>MY PERSONALITY</small><h2>Always Learning</h2></div><div class="chips"><span class="chip">Creative</span><span class="chip">Organised</span><span class="chip">Curious</span><span class="chip">Team-minded</span><span class="chip">Problem Solver</span></div></section>
+<section id="contact" class="contact"><div class="section-title"><small>LET'S CONNECT</small><h2>Contact Me</h2></div><p>Add your email address, phone number and location here.</p><p><b>Email:</b> Your email address &nbsp; | &nbsp; <b>Phone:</b> Your phone number</p><a class="btn" href="mailto:your.email@example.com">Email Me</a></section>
+<footer>© 2026 Mohamed Nafeel · Personal Portfolio</footer>
+</body></html>
